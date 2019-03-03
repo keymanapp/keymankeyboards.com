@@ -1,0 +1,9 @@
+/* CSS Document: styles for Cameroon site pages */
+
+table.chars { border-collapse: collapse }
+table.chars td { border: solid 1px #c0c0c0; font: 1.2em Tahoma; width: 1.5em; text-align: center; cursor: default }
+table.chars th { border: solid 1px #c0c0c0; font: bold 1.2em Arial; width: 1.5em; background: #c0c0c0; text-align: center }
+
+span.key { font: bold 10pt Verdana; padding: 0 4px; border: solid 1px #aaaaaa; margin: 0 4px; }
+span.char { color: #ad4a28; }
+

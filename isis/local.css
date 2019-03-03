@@ -1,0 +1,70 @@
+/* CSS Document: additional styles for ISIS site pages */
+
+.key { 
+    float: left;
+    display: block; 
+    position: relative;
+    overflow: hidden;
+    height: 35px;    
+    margin: 2px 0px 0px 2px;
+    border: solid 1px grey;      
+}
+
+#K_SPACE, #K_SPACE_1 {
+  width: 234px;   
+}
+
+#K_BKSLASH, #K_BKSLASH_1 {
+  width: 42px;   
+}
+
+#K_oE2, #K_oE2_1 {  
+    display:none;  
+}
+
+#K_SHIFTL, #K_SHIFTL_1 {
+  width: 80px;
+}
+
+.plain {  
+  background-repeat: no-repeat;
+  width: 34px;
+  border: solid 1px #808080;
+}
+
+.special {
+  background-repeat: no-repeat;  
+  background: #c0c0c0;
+  border: solid 1px #808080;
+}
+
+.keycap {
+  font: bold 7pt Arial; 
+  position: absolute; 
+  left: 4px; 
+  top: 2px;
+}
+
+.key .keycap {          
+  display: block;
+}
+
+.special .keycap {
+  display: block;
+}
+
+.keytext {  
+	font: 12pt Latha; 
+  position: absolute; 
+  display: block;
+  right: 2px;
+  bottom: 2px;
+  color: blue;
+}
+
+table.chars { border-collapse: collapse }
+table.chars td { border: solid 1px #c0c0c0; font: 1.2em Tahoma; width: 1.5em; text-align: center; cursor: default }
+table.chars th { border: solid 1px #c0c0c0; font: bold 1.2em Arial; width: 1.5em; background: #c0c0c0; text-align: center }
+
+span.key { font: bold 10pt Verdana; padding: 0 4px; border: solid 1px #aaaaaa; margin: 0 4px; }
+span.char { color: #ad4a28; }
