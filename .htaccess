@@ -1,0 +1,36 @@
+# This file is used when running with Apache. Adapted from web.config.
+# NOTE: this is not very well tested...
+
+#php_value include_path "/var/www/html/_includes:."
+#Not needed if local apache.conf includes this 
+
+RewriteEngine on
+RewriteBase /
+
+# Redirect http://keymanwebkeyboards.com to https://keymanwebkeyboards.com,
+# but only if on a live site (keymanwebkeyboards.com) and not
+# matching `/.well-known/(.*)$` (for Let's Encrypt)
+<If "%{REQUEST_SCHEME} == 'http' && %{HTTP_HOST} == 'keymanwebkeyboards.com' && %{REQUEST_URI} !~ m#^/.well-known/(.*)$#" >
+    Redirect "/" "https://keymankeyboards.com"
+</If>
+
+
+# Redirects
+
+# "Match index.php?.*" stopProcessing="true"
+RewriteRule "^index.php\?(.*)$" "/index.php?$1" [END]
+
+# "Match ?(.*)" stopProcessing="true"
+RewriteRule "^\?(.*)$" "/index.php?{R:1}" [END]
+
+# "Match ##?..." stopProcessing="true"
+RewriteRule "^(\d+)\?(.+)$" "/index.php?id=$1&amp;$2" [END]
+
+# "Match ##" stopProcessing="true"
+RewriteRule "^(\d+)$" "/index.php?id=$1" [END]
+
+# "Match .*?.*" stopProcessing="true"
+RewriteRule "^(.*)\?(.+)$" "/index.php?q=$1&amp;$2" [END]
+
+# "Match .*" enabled="true" stopProcessing="true"
+RewriteRule "^(.*)$" "/index.php?q=$1" [END]
