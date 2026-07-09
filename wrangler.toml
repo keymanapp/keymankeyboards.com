@@ -1,0 +1,9 @@
+name = "keymankeyboards-com"
+main = "src/index.ts"
+compatibility_date = "2024-02-23"
+
+routes = [
+	{ pattern = "keymankeyboards.com", custom_domain = true },
+	{ pattern = "www.keymankeyboards.com", custom_domain = true },
+]
+
